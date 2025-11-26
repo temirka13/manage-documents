@@ -1,0 +1,21 @@
+:root {
+  --white: #ffffff;
+  --blue01: rgba(13, 110, 253, 1);
+  --blue02: rgba(31, 67, 122, 1);
+  --danger01: rgba(220, 53, 69, 1);
+  --danger02: rgba(163, 24, 24);
+  --gray01: rgba(233, 236, 239, 1);
+  --gray02: rgba(224, 224, 224, 1);
+  --gray03: rgba(248, 249, 250, 1);
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  --border-radius-8: 8px;
+  --border-radius-10: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
