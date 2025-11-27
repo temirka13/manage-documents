@@ -14,8 +14,14 @@ const useFetchDocuments = () => {
   const { setSearch } = useSearchStore();
 
   const getDocuments = (search: string = '') => {
-    isLoading.value = true;
     setSearch(search);
+
+    if (!search) {
+      documents.value = [];
+      return;
+    }
+
+    isLoading.value = true;
 
     fetchDocuments(search)
       .then((response: TDocument[]) => {

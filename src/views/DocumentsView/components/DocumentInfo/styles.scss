@@ -2,11 +2,6 @@
   display: flex;
   gap: 61px;
   padding: 30px;
-  border-left: 1px solid var(--gray02);
-
-  @media (max-width: 570px) {
-    border: none;
-  }
 
   &__image-wrapper {
     min-width: 424px;
@@ -28,6 +23,7 @@
     font-size: 16px;
     font-family: 600;
     margin-bottom: 14px;
+    line-height: 140%;
   }
 
   &__description {

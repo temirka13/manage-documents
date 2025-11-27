@@ -4,7 +4,7 @@
     <p>username</p>
   </header>
   <main>
-    <DocumentsView />
+    <DocumentsView class="documents-view" />
   </main>
 </template>
 
@@ -32,5 +32,9 @@ header {
   p {
     font-size: 16px;
   }
+}
+
+.documents-view {
+  height: calc(100vh - 178px);
 }
 </style>

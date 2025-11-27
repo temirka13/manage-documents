@@ -21,7 +21,7 @@
           <p v-if="error" class="documents-view__error">
             {{ error }}
           </p>
-          <p v-else-if="!documents.length">
+          <p v-else-if="!documents.length" class="documents-view__empty-text">
             Ничего не найдено
           </p>
           <template v-else>
@@ -61,7 +61,6 @@ import DocumentInfo from './components/DocumentInfo/index.vue';
 import useFetchDocuments from './composables/useFetchDocuments';
 import useManageDocument from './composables/useManageDocument';
 import { useSearchStore } from '@/stores/search';
-import { useCurrentDocumentStore } from '@/stores/currentDocument';
 
 defineOptions({ name: 'DocumentsView' });
 
@@ -84,14 +83,10 @@ const {
 
 const { search } = useSearchStore();
 
-const { currentDocument: storeCurrentDocument } = useCurrentDocumentStore();
 
 
 onMounted(() => {
   getDocuments(search);
-  if (storeCurrentDocument) {
-    handleCurrentDocumentSet(storeCurrentDocument);
-  }
 });
 
 </script>

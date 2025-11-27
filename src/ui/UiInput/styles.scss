@@ -8,4 +8,7 @@
   &:focus {
     border-color: var(--blue01);
   }
+  &::placeholder {
+    color: var(--gray04);
+  }
 }
