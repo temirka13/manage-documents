@@ -23,5 +23,3 @@ withDefaults(defineProps<TImgProps>(), {
 });
 
 </script>
-
-<style lang="scss" scoped src="./styles.scss" />
