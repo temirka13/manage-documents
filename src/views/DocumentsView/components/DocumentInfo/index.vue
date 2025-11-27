@@ -1,17 +1,11 @@
 <template>
   <div class="document-info">
     <div class="document-info__image-wrapper">
-      <img
-        v-if="document.image"
-        class="document-info__image"
+      <UiImg
         :src="document.image"
-        :alt="document.name || 'not found'"
-      >
-      <img
-        v-else
-        class="document-info__image"
-        src="@/assets/images/notFound.png"
-      >
+        :alt="document.name"
+        className="document-info__image"
+      />
     </div>
     <div class="document-info__info">
       <h3 class="document-info__title">
@@ -40,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import UiButton from '@/ui/UiButton/index.vue';
+import { UiButton, UiImg } from '@/ui';
 import { EButtonType } from '@/ui/UiButton/types';
 import type { TDocumentInfoEmits, TDocumentInfoProps } from './types';
 

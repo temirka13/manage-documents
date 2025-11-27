@@ -4,6 +4,10 @@
   padding: 30px;
   border-left: 1px solid var(--gray02);
 
+  @media (max-width: 570px) {
+    border: none;
+  }
+
   &__image-wrapper {
     min-width: 424px;
     height: 286px;

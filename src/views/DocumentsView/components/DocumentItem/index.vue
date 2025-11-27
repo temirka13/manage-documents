@@ -1,16 +1,10 @@
 <template>
   <div class="document-item">
-    <img
-      v-if="document.image"
-      class="document-item__image"
+    <UiImg
       :src="document.image"
-      :alt="document.name || 'not found'"
-    >
-    <img
-      v-else
-      class="document-item__image"
-      src="@/assets/images/notFound.png"
-    >
+      :alt="document.name"
+      className="document-item__image"
+    />
     <div
       class="document-item__info"
       :class="{ 'document-item__info-active': isActive}"
@@ -26,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { UiImg } from '@/ui';
 import type { TDocumentItemProps } from './types';
 
 defineOptions({name: 'DocumentItem' });

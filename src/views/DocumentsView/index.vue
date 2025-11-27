@@ -37,27 +37,24 @@
         </template>
       </div>
     </div>
-    <div class="documents-view__info">
-      <div v-if="!currentDocument" class="documents-view__info-empty">
-        <p>
-          Выберите документ, чтобы посмотреть его содержиое
-        </p>
-      </div>
-      <DocumentInfo
-        v-else
-        :document="currentDocument"
-        @download="handleDocumentDownload"
-        @delete="handleCurrentDocumentDelete"
-      />
+    <div v-if="!currentDocument" class="documents-view__info-empty">
+      <p>
+        Выберите документ, чтобы посмотреть его содержиое
+      </p>
     </div>
+    <DocumentInfo
+      v-else
+      :document="currentDocument"
+      @download="handleDocumentDownload"
+      @delete="handleCurrentDocumentDelete"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
 
-import UiInput from '@/ui/UiInput/index.vue';
-import UiLoader from '@/ui/UiLoader/index.vue';
+import { UiInput, UiLoader } from '@/ui';
 
 import DocumentItem from './components/DocumentItem/index.vue';
 import DocumentInfo from './components/DocumentInfo/index.vue';
